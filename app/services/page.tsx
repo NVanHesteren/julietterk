@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookCta from "@/components/BookCta";
 import ThumbStrip from "@/components/ThumbStrip";
-import { FadeUp, StaggerChildren, StaggerItem } from "@/components/Animate";
+import { FadeUp } from "@/components/Animate";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -77,38 +77,42 @@ export default function ServicesIndex() {
       <ThumbStrip />
 
       <section className="py-16 md:py-24">
-        <StaggerChildren className="max-w-wide mx-auto px-[5vw] grid grid-cols-1 md:grid-cols-3 gap-4">
-          {BUCKETS.map((b) => (
-            <StaggerItem key={b.num}>
-            <Link
-              href={b.href}
-              className="group bg-white p-8 pt-10 rounded border border-ink/10 flex flex-col gap-3.5 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline h-full"
-            >
-              <span className="text-[11px] uppercase tracking-[0.14em] text-ink-light font-medium">{b.num}</span>
-              <h2 className="font-serif font-normal text-2xl text-ink tracking-[-0.014em] leading-[1.15]">
-                {renderTitle(b.title)}
-              </h2>
-              <p className="text-sm text-ink-mid leading-[1.65] mb-1">{b.desc}</p>
-              <ul className="list-none p-0 m-0 flex-1">
-                {b.items.map((item, i) => (
-                  <li
-                    key={i}
-                    className="text-[13px] text-ink-mid leading-snug py-2.5 border-b border-ink/5 last:border-b-0"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <span className="text-[11px] uppercase tracking-[0.14em] text-sage font-medium inline-flex items-center gap-2 mt-2">
-                Find out more
-                <svg className="arrow w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M13 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
-            </StaggerItem>
+        <div className="max-w-wide mx-auto px-[5vw] flex flex-col gap-6">
+          {BUCKETS.map((b, idx) => (
+            <FadeUp key={b.num} delay={idx * 0.1}>
+              <Link
+                href={b.href}
+                className="group block bg-white p-8 md:p-10 rounded border border-ink/10 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 md:gap-12 items-start">
+                  <div>
+                    <span className="text-[11px] uppercase tracking-[0.14em] text-clay font-medium">{b.num}</span>
+                    <h2 className="font-serif font-normal text-[clamp(1.6rem,3vw,2.2rem)] text-ink tracking-[-0.014em] leading-[1.15] mt-2 mb-4">
+                      {renderTitle(b.title)}
+                    </h2>
+                    <p className="text-base text-ink-mid leading-[1.7] mb-5">{b.desc}</p>
+                    <span className="text-[11px] uppercase tracking-[0.14em] text-sage font-medium inline-flex items-center gap-2">
+                      Find out more
+                      <svg className="arrow w-3.5 h-3.5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M5 12h14M13 5l7 7-7 7" />
+                      </svg>
+                    </span>
+                  </div>
+                  <ul className="list-none p-0 m-0 md:pt-8">
+                    {b.items.map((item, i) => (
+                      <li
+                        key={i}
+                        className="text-[14px] text-ink leading-snug py-3 pl-[22px] relative border-b border-ink/5 last:border-b-0 before:content-[''] before:absolute before:left-0 before:top-[18px] before:w-3 before:h-px before:bg-sage"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Link>
+            </FadeUp>
           ))}
-        </StaggerChildren>
+        </div>
       </section>
 
       <BookCta />
