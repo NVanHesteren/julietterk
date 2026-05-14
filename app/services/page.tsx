@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import BookCta from "@/components/BookCta";
 import ConsultationInfo from "@/components/ConsultationInfo";
 import ThumbStrip from "@/components/ThumbStrip";
+import { FadeUp, StaggerChildren, StaggerItem } from "@/components/Animate";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -62,23 +63,25 @@ export default function ServicesIndex() {
     <>
       <section className="py-20 md:py-[80px] bg-cream">
         <div className="max-w-wide mx-auto px-[5vw]">
-          <span className="eyebrow">Services</span>
-          <h1 className="h-display text-[clamp(2.4rem,5vw,3.6rem)] mt-5 mb-6 max-w-[820px]">
-            Three areas of practice, <em>built from NHS experience</em>.
-          </h1>
-          <p className="text-[17px] text-ink-mid max-w-[640px] leading-[1.65]">
-            Most families come to me for one of three reasons. Each covers a range of specific concerns. If you&apos;re unsure which fits, book a consultation and we&apos;ll work it out together.
-          </p>
+          <FadeUp>
+            <span className="eyebrow">Services</span>
+            <h1 className="h-display text-[clamp(2.4rem,5vw,3.6rem)] mt-5 mb-6 max-w-[820px]">
+              Three areas of practice, <em>built from NHS experience</em>.
+            </h1>
+            <p className="text-[17px] text-ink-mid max-w-[640px] leading-[1.65]">
+              Most families come to me for one of three reasons. Each covers a range of specific concerns. If you&apos;re unsure which fits, book a consultation and we&apos;ll work it out together.
+            </p>
+          </FadeUp>
         </div>
       </section>
 
       <ThumbStrip />
 
       <section className="py-16 md:py-24">
-        <div className="max-w-wide mx-auto px-[5vw] flex flex-col gap-10">
+        <StaggerChildren className="max-w-wide mx-auto px-[5vw] flex flex-col gap-10">
           {BUCKETS.map((b) => (
+            <StaggerItem key={b.num}>
             <Link
-              key={b.num}
               href={b.href}
               className="group bg-white p-8 md:p-10 rounded border border-ink/10 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline"
             >
@@ -108,8 +111,9 @@ export default function ServicesIndex() {
                 </ul>
               </div>
             </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerChildren>
       </section>
 
       <ConsultationInfo />

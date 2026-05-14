@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import BookButton from "@/components/BookButton";
 import BookCta from "@/components/BookCta";
+import { FadeUp, FadeIn } from "@/components/Animate";
 
 export const metadata: Metadata = {
   title: "About",
@@ -30,26 +31,32 @@ export default function AboutPage() {
       <section className="py-20 md:py-[80px] bg-cream">
         <div className="max-w-wide mx-auto px-[5vw]">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-10 md:gap-16 items-center">
-            <div className="aspect-[4/5] bg-sage-pale rounded overflow-hidden relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/juliette.jpg"
-                alt="Juliette Reese-Kari, paediatric dietitian"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <FadeIn>
+              <div className="aspect-[4/5] bg-sage-pale rounded overflow-hidden relative">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/juliette.jpg"
+                  alt="Juliette Reese-Kari, paediatric dietitian"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </FadeIn>
             <div>
-              <span className="eyebrow">About me</span>
-              <h1 className="h-display text-[clamp(2.2rem,5vw,3.6rem)] mt-4 mb-6">
-                Hi, I&apos;m <em>Juliette</em>.
-              </h1>
+              <FadeUp>
+                <span className="eyebrow">About me</span>
+                <h1 className="h-display text-[clamp(2.2rem,5vw,3.6rem)] mt-4 mb-6">
+                  Hi, I&apos;m <em>Juliette</em>.
+                </h1>
+              </FadeUp>
               <p className="text-[17px] text-ink-mid max-w-[540px] leading-[1.7] mb-5">
                 I&apos;m a highly skilled registered paediatric dietitian based in London. I&apos;m incredibly passionate about infant, child and adolescent nutrition. I&apos;ve been fortunate to work my whole dietetic career in paediatrics, gaining vast experience across a wide range of conditions.
               </p>
               <p className="text-[17px] text-ink-mid max-w-[540px] leading-[1.7] mb-8">
                 There are so many factors that influence the way we eat and I&apos;m here to provide clear, evidence-based advice to help your little one eat well and grow to their best potential.
               </p>
-              <BookButton>Book a consultation</BookButton>
+              <FadeUp delay={0.2}>
+                <BookButton>Book a consultation</BookButton>
+              </FadeUp>
             </div>
           </div>
         </div>
@@ -58,10 +65,12 @@ export default function AboutPage() {
       {/* Journey */}
       <section className="py-16 md:py-24">
         <div className="max-w-narrow mx-auto px-[5vw]">
-          <span className="eyebrow">My journey so far</span>
-          <h2 className="h-display text-[clamp(1.8rem,3.6vw,2.6rem)] mt-4 mb-7">
-            Six years in <em>paediatric dietetics</em>.
-          </h2>
+          <FadeUp>
+            <span className="eyebrow">My journey so far</span>
+            <h2 className="h-display text-[clamp(1.8rem,3.6vw,2.6rem)] mt-4 mb-7">
+              Six years in <em>paediatric dietetics</em>.
+            </h2>
+          </FadeUp>
           <div className="text-base text-ink-mid leading-[1.75] space-y-5">
             <p>
               I&apos;ve worked in paediatric dietetics within the NHS for the last six years, in both acute and community settings. I have vast experience managing a range of complex conditions.
