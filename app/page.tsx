@@ -1,9 +1,26 @@
+import type { Metadata } from "next";
 import HomeHero from "@/components/HomeHero";
 import Ticker from "@/components/Ticker";
 import ServiceCategories from "@/components/ServiceCategories";
 import AboutSection from "@/components/AboutSection";
 import BookCta from "@/components/BookCta";
 import FaqAccordion from "@/components/FaqAccordion";
+import FaqSchema from "@/components/FaqSchema";
+import OrganizationSchema from "@/components/OrganizationSchema";
+
+export const metadata: Metadata = {
+  title: "Paediatric Dietitian Online | Juliette Reese-Kari",
+  description:
+    "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 6+ years NHS experience. Evidence-based nutrition advice UK-wide.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Paediatric Dietitian Online | Juliette Reese-Kari",
+    description:
+      "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 6+ years NHS experience.",
+    url: "https://julietterk.com",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Juliette Reese-Kari - Paediatric Dietitian" }],
+  },
+};
 
 const HOME_FAQS = [
   { q: "How do I book an appointment?", a: "All online. Pick a time, fill in a short pre-consult form so I know what we're working with, and you'll get a video link emailed to you. No GP referral needed.", showBook: true },
@@ -18,6 +35,8 @@ const HOME_FAQS = [
 export default function Home() {
   return (
     <>
+      <OrganizationSchema />
+      <FaqSchema faqs={HOME_FAQS} />
       <HomeHero />
       <Ticker />
       <ServiceCategories />

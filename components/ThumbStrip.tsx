@@ -1,5 +1,15 @@
 import { THUMBS } from "@/lib/images";
 
+const THUMB_ALTS = [
+  "Baby exploring food during weaning",
+  "Toddler eating healthy snack",
+  "Fresh fruit and vegetables for children",
+  "Baby-led weaning with soft finger foods",
+  "Teenager preparing a nutritious meal",
+  "Mother feeding infant",
+  "Healthy balanced meal for children",
+];
+
 export default function ThumbStrip() {
   const doubled = [...THUMBS, ...THUMBS];
   return (
@@ -13,7 +23,7 @@ export default function ThumbStrip() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={src}
-              alt=""
+              alt={THUMB_ALTS[i % THUMB_ALTS.length]}
               className="w-full h-full object-cover"
             />
           </div>

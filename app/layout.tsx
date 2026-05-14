@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Juliette Reese-Kari",
   },
   description:
-    "Online paediatric dietetic consultations with Juliette Reese-Kari (BSc, RD). HCPC registered, 6+ years NHS specialist experience. Clear, evidence-based advice for infants, children and teens.",
+    "Online paediatric dietetic consultations with Juliette Reese-Kari. HCPC registered, 6+ years NHS specialist experience. Evidence-based advice for children.",
   openGraph: {
     title: "Juliette Reese-Kari - Paediatric Dietitian",
     description:

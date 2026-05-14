@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import BookButton from "@/components/BookButton";
 import BookCta from "@/components/BookCta";
 import FaqAccordion from "@/components/FaqAccordion";
+import FaqSchema from "@/components/FaqSchema";
 import ThumbStrip from "@/components/ThumbStrip";
 
 export const metadata: Metadata = {
@@ -62,6 +63,7 @@ const FAQS = [
 export default function GeneralPaediatrics() {
   return (
     <>
+      <FaqSchema faqs={FAQS} />
       <section className="py-20 md:py-[80px] bg-cream">
         <div className="max-w-wide mx-auto px-[5vw]">
           <span className="eyebrow">Services · 01</span>

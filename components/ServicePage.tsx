@@ -3,6 +3,7 @@ import { AGE } from "@/lib/ages";
 import { ServicePage as ServicePageData, pages } from "@/content/pages";
 import BookButton from "./BookButton";
 import FaqAccordion from "./FaqAccordion";
+import FaqSchema from "./FaqSchema";
 import BookCta from "./BookCta";
 import ThumbStrip from "./ThumbStrip";
 
@@ -48,6 +49,7 @@ export default function ServicePageTemplate({ data, slug }: ServicePageTemplateP
 
   return (
     <>
+      <FaqSchema faqs={data.faqs} />
       {/* Breadcrumb */}
       <div className="max-w-wide mx-auto px-[5vw]">
         <div className="pt-8 text-xs uppercase tracking-[0.14em] text-ink-light font-medium">
