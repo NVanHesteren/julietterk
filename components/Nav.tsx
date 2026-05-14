@@ -40,14 +40,27 @@ export default function Nav() {
             : "bg-cream/85 backdrop-blur-md border-b border-transparent"
         }`}
       >
-        <Link href="/" className="flex flex-col gap-[2px] no-underline">
-          <span className="font-serif font-normal text-[18px] text-ink tracking-[-0.012em] leading-none">
-            Juliette Reese-Kari
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-ink-light font-medium">
-            Paediatric Dietitian
-          </span>
-        </Link>
+        <div className="flex items-center gap-4">
+          {/* Mobile hamburger - left of logo */}
+          <button
+            className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
+            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
+          </button>
+
+          <Link href="/" className="flex flex-col gap-[2px] no-underline">
+            <span className="font-serif font-normal text-[18px] text-ink tracking-[-0.012em] leading-none">
+              Juliette Reese-Kari
+            </span>
+            <span className="text-[10px] uppercase tracking-[0.18em] text-ink-light font-medium">
+              Paediatric Dietitian
+            </span>
+          </Link>
+        </div>
 
         <div className="flex items-center gap-5 md:gap-8">
           {/* Desktop links */}
@@ -60,17 +73,6 @@ export default function Nav() {
               </li>
             ))}
           </ul>
-
-          {/* Mobile hamburger */}
-          <button
-            className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Menu"
-          >
-            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[6.5px]" : ""}`} />
-            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
-          </button>
 
           <BookButton variant="primary" className="!py-[11px] !px-[22px] !text-[13px] !rounded-full">
             <span className="hidden sm:inline">Book a consultation</span>
