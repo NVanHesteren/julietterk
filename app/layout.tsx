@@ -21,6 +21,9 @@ const jakarta = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://julietterk.com"),
+  verification: {
+    google: "MbNBmLVw_zmyeUS6--_5IeoIDHZHjKGuPQJvdDdV_Fc",
+  },
   title: {
     default: "Juliette Reese-Kari - Paediatric Dietitian",
     template: "%s | Juliette Reese-Kari",
