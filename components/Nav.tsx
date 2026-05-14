@@ -36,8 +36,8 @@ export default function Nav() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 h-[72px] px-[5vw] flex items-center justify-between transition-all duration-300 ${
           scrolled
-            ? "bg-cream/95 backdrop-blur-md border-b border-ink/10"
-            : "bg-cream/85 backdrop-blur-md border-b border-transparent"
+            ? "bg-cream border-b border-ink/10"
+            : "bg-cream border-b border-transparent"
         }`}
       >
         <div className="flex items-center gap-4">
