@@ -12,10 +12,11 @@ interface AnimateProps {
 export function FadeUp({ children, className = "", delay = 0 }: AnimateProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay, ease: [0.25, 0.46, 0.45, 0.94] }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
+      style={{ willChange: "opacity, transform" }}
       className={className}
     >
       {children}
@@ -28,8 +29,9 @@ export function FadeIn({ children, className = "", delay = 0 }: AnimateProps) {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      style={{ willChange: "opacity" }}
       className={className}
     >
       {children}
@@ -42,9 +44,9 @@ export function StaggerChildren({ children, className = "" }: { children: ReactN
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-40px" }}
+      viewport={{ once: true, margin: "-60px" }}
       variants={{
-        visible: { transition: { staggerChildren: 0.08 } },
+        visible: { transition: { staggerChildren: 0.12 } },
       }}
       className={className}
     >
@@ -57,9 +59,10 @@ export function StaggerItem({ children, className = "" }: { children: ReactNode;
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 16 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] } },
+        hidden: { opacity: 0, y: 10 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
       }}
+      style={{ willChange: "opacity, transform" }}
       className={className}
     >
       {children}
