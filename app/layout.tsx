@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${jakarta.variable}`}>
-      <head>
+      <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-KESX7HHED3"
           strategy="afterInteractive"
@@ -60,8 +60,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-KESX7HHED3');
           `}
         </Script>
-      </head>
-      <body>
         <PasswordGate>
           <Nav />
           <main className="pt-[72px]">{children}</main>
