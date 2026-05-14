@@ -3,7 +3,6 @@ import Script from "next/script";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import PasswordGate from "@/components/PasswordGate";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -64,11 +63,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             gtag('config', 'G-KESX7HHED3');
           `}
         </Script>
-        <PasswordGate>
-          <Nav />
-          <main className="pt-[72px]">{children}</main>
-          <Footer />
-        </PasswordGate>
+        <Nav />
+        <main className="pt-[72px]">{children}</main>
+        <Footer />
         <Analytics />
       </body>
     </html>
