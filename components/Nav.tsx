@@ -44,12 +44,12 @@ export default function Nav() {
           <span className="font-serif font-normal text-[18px] text-ink tracking-[-0.012em] leading-none">
             Juliette Reese-Kari
           </span>
-          <span className="text-[10px] uppercase tracking-[0.18em] text-ink-light font-medium hidden sm:inline">
+          <span className="text-[10px] uppercase tracking-[0.18em] text-ink-light font-medium">
             Paediatric Dietitian
           </span>
         </Link>
 
-        <div className="flex items-center gap-8">
+        <div className="flex items-center gap-5 md:gap-8">
           {/* Desktop links */}
           <ul className="hidden md:flex gap-7 items-center list-none m-0 p-0">
             {LINKS.map((l) => (
@@ -61,11 +61,6 @@ export default function Nav() {
             ))}
           </ul>
 
-          <BookButton variant="primary" className="!py-[11px] !px-[22px] !text-[13px] !rounded-full">
-            <span className="hidden sm:inline">Book a consultation</span>
-            <span className="sm:hidden">Book</span>
-          </BookButton>
-
           {/* Mobile hamburger */}
           <button
             className="md:hidden flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-1"
@@ -76,6 +71,11 @@ export default function Nav() {
             <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
             <span className={`block w-5 h-[1.5px] bg-ink transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[6.5px]" : ""}`} />
           </button>
+
+          <BookButton variant="primary" className="!py-[11px] !px-[22px] !text-[13px] !rounded-full">
+            <span className="hidden sm:inline">Book a consultation</span>
+            <span className="sm:hidden">Book</span>
+          </BookButton>
         </div>
       </nav>
 
