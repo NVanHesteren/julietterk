@@ -80,10 +80,10 @@ export default function ServicesIndex() {
       <section className="py-16 md:py-24">
         <StaggerChildren className="max-w-wide mx-auto px-[5vw] flex flex-col gap-10">
           {BUCKETS.map((b) => (
-            <StaggerItem key={b.num}>
+            <StaggerItem key={b.num} className="bg-white rounded border border-ink/10 transition-all duration-300 hover:border-sage hover:-translate-y-0.5">
             <Link
               href={b.href}
-              className="group bg-white p-8 md:p-10 rounded border border-ink/10 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline"
+              className="group block p-8 md:p-10 no-underline"
             >
               <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 items-start">
                 <div>
