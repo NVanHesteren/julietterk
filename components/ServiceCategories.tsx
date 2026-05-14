@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { FadeUp, StaggerChildren, StaggerItem } from "./Animate";
 
 const CATS = [
   {
@@ -41,7 +44,7 @@ export default function ServiceCategories() {
   return (
     <section className="py-16 md:py-24" id="services">
       <div className="max-w-wide mx-auto px-[5vw]">
-        <div className="mb-14 max-w-[720px]">
+        <FadeUp className="mb-14 max-w-[720px]">
           <span className="eyebrow">What I do</span>
           <h2 className="h-display text-[clamp(2rem,4vw,3rem)] mt-4 mb-4">
             Three areas of practice, <em>built from NHS experience</em>.
@@ -49,14 +52,14 @@ export default function ServiceCategories() {
           <p className="text-base text-ink-mid leading-[1.65] max-w-[620px]">
             Most families come to me for one of three reasons. Each covers a wide range of specific concerns. I&apos;ll guide you to what fits, and we&apos;ll build a plan from there.
           </p>
-        </div>
+        </FadeUp>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <StaggerChildren className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CATS.map((c) => (
+            <StaggerItem key={c.num}>
             <Link
-              key={c.num}
               href={c.href}
-              className="group bg-white p-8 pt-10 rounded border border-ink/10 flex flex-col gap-3.5 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline"
+              className="group bg-white p-8 pt-10 rounded border border-ink/10 flex flex-col gap-3.5 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline h-full"
             >
               <span className="text-[11px] uppercase tracking-[0.14em] text-ink-light font-medium">{c.num}</span>
               <h3 className="font-serif font-normal text-2xl text-ink tracking-[-0.014em] leading-[1.15]">
@@ -80,8 +83,9 @@ export default function ServiceCategories() {
                 </svg>
               </span>
             </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerChildren>
       </div>
     </section>
   );

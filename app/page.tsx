@@ -7,6 +7,7 @@ import BookCta from "@/components/BookCta";
 import FaqAccordion from "@/components/FaqAccordion";
 import FaqSchema from "@/components/FaqSchema";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import { FadeUp } from "@/components/Animate";
 
 export const metadata: Metadata = {
   title: "Paediatric Dietitian Online | Juliette Reese-Kari",
@@ -44,13 +45,15 @@ export default function Home() {
       <BookCta expanded />
       <section className="py-16 md:py-24 bg-cream-deep" id="faq">
         <div className="max-w-narrow mx-auto px-[5vw]">
-          <div className="mb-14 max-w-[720px]">
+          <FadeUp className="mb-14 max-w-[720px]">
             <span className="eyebrow">Common questions</span>
             <h2 className="h-display text-[clamp(2rem,4vw,3rem)] mt-4 mb-4">
               Things parents ask <em>before booking</em>.
             </h2>
-          </div>
-          <FaqAccordion items={HOME_FAQS} />
+          </FadeUp>
+          <FadeUp delay={0.1}>
+            <FaqAccordion items={HOME_FAQS} />
+          </FadeUp>
         </div>
       </section>
     </>
