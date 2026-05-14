@@ -22,6 +22,7 @@ export default function BookButton({
     (async () => {
       const cal = await getCalApi({ namespace: "booking" });
       cal("ui", {
+        theme: "light",
         styles: { branding: { brandColor: "#6F8666" } },
         hideEventTypeDetails: false,
         layout: "month_view",
