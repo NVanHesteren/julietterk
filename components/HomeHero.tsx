@@ -21,7 +21,7 @@ export default function HomeHero() {
             </FadeUp>
             <FadeUp delay={0.2}>
               <p className="text-[17px] text-ink-mid max-w-[480px] leading-[1.65] mb-9">
-                Online consultations with Juliette Reese-Kari, a registered paediatric dietitian with 6+ years specialist NHS experience. Evidence-based advice for infants, children and teens.
+                Online consultations with Juliette Reese-Kari, a registered paediatric dietitian with 8+ years specialist NHS experience. Evidence-based advice for infants, children and teens.
               </p>
             </FadeUp>
             <FadeUp delay={0.3}>

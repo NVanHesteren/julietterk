@@ -1,5 +1,5 @@
 const ITEMS = [
-  "HCPC Registered", "BDA Member", "NHS-trained · 6+ years",
+  "HCPC Registered", "BDA Member", "NHS-trained · 8+ years",
   "Online · UK-wide", "Ages 0 to 18", "No Referral Needed",
 ];
 

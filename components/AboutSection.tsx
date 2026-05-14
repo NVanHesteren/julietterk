@@ -7,7 +7,7 @@ import { FadeUp, FadeIn } from "./Animate";
 const CREDS = [
   "HCPC registered (DT29509)",
   "BDA full member",
-  "6+ years NHS",
+  "8+ years NHS",
   "Paediatric specialist",
 ];
 
@@ -32,7 +32,7 @@ export default function AboutSection() {
             </FadeUp>
             <FadeUp delay={0.1}>
               <p className="text-base text-ink-mid leading-[1.7] mb-5">
-                I&apos;m a registered paediatric dietitian based in London, passionate about helping children eat and grow to their best potential. I&apos;ve spent my whole dietetic career in paediatrics - six years across NHS acute and community settings.
+                I&apos;m a registered paediatric dietitian based in London, passionate about helping children eat and grow to their best potential. I&apos;ve spent my whole dietetic career in paediatrics - eight years across NHS acute and community settings.
               </p>
             </FadeUp>
             <FadeUp delay={0.15}>

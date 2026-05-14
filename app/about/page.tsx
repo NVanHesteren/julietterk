@@ -7,7 +7,7 @@ import { FadeUp, FadeIn } from "@/components/Animate";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Juliette Reese-Kari - a registered paediatric dietitian with 6+ years NHS experience across acute and community settings.",
+    "Meet Juliette Reese-Kari - a registered paediatric dietitian with 8+ years NHS experience across acute and community settings.",
   alternates: { canonical: "/about" },
 };
 
@@ -68,12 +68,12 @@ export default function AboutPage() {
           <FadeUp>
             <span className="eyebrow">My journey so far</span>
             <h2 className="h-display text-[clamp(1.8rem,3.6vw,2.6rem)] mt-4 mb-7">
-              Six years in <em>paediatric dietetics</em>.
+              Eight years in <em>paediatric dietetics</em>.
             </h2>
           </FadeUp>
           <div className="text-base text-ink-mid leading-[1.75] space-y-5">
             <p>
-              I&apos;ve worked in paediatric dietetics within the NHS for the last six years, in both acute and community settings. I have vast experience managing a range of complex conditions.
+              I&apos;ve worked in paediatric dietetics within the NHS for the last eight years, in both acute and community settings. I have vast experience managing a range of complex conditions.
             </p>
             <p>
               I continue to work in the community supporting complex tube-fed patients and also work privately throughout the week, offering virtual consultations to families across the UK.

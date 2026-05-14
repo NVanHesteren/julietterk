@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     template: "%s | Juliette Reese-Kari",
   },
   description:
-    "Online paediatric dietetic consultations with Juliette Reese-Kari. HCPC registered, 6+ years NHS specialist experience. Evidence-based advice for children.",
+    "Online paediatric dietetic consultations with Juliette Reese-Kari. HCPC registered, 8+ years NHS specialist experience. Evidence-based advice for children.",
   openGraph: {
     title: "Juliette Reese-Kari - Paediatric Dietitian",
     description:
-      "Online paediatric dietetic consultations. HCPC registered, 6+ years NHS specialist experience.",
+      "Online paediatric dietetic consultations. HCPC registered, 8+ years NHS specialist experience.",
     url: "https://julietterk.com",
     siteName: "Juliette Reese-Kari",
     locale: "en_GB",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Juliette Reese-Kari - Paediatric Dietitian",
-    description: "Online paediatric dietetic consultations. HCPC registered, 6+ years NHS specialist experience.",
+    description: "Online paediatric dietetic consultations. HCPC registered, 8+ years NHS specialist experience.",
     images: ["/og.png"],
   },
 };

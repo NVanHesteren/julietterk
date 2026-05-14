@@ -12,12 +12,12 @@ import { FadeUp } from "@/components/Animate";
 export const metadata: Metadata = {
   title: "Paediatric Dietitian Online | Juliette Reese-Kari",
   description:
-    "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 6+ years NHS experience. Evidence-based nutrition advice UK-wide.",
+    "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 8+ years NHS experience. Evidence-based nutrition advice UK-wide.",
   alternates: { canonical: "/" },
   openGraph: {
     title: "Paediatric Dietitian Online | Juliette Reese-Kari",
     description:
-      "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 6+ years NHS experience.",
+      "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 8+ years NHS experience.",
     url: "https://julietterk.com",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Juliette Reese-Kari - Paediatric Dietitian" }],
   },

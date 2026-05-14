@@ -94,7 +94,7 @@ export default function Gastroenterology() {
               Children with gastroenterological conditions have specific nutritional needs that change with their condition, their treatment, and their growth. Generic dietary advice doesn&apos;t cut it. A child in a Crohn&apos;s flare needs different support from one in remission. A newly diagnosed coeliac needs different help from one who&apos;s been gluten-free for two years.
             </p>
             <p>
-              I&apos;ve managed these conditions across NHS acute and community settings for six years. I know what the evidence says, I know what works practically, and I know how to make dietary management fit into a child&apos;s actual life - school, parties, sleepovers, and all.
+              I&apos;ve managed these conditions across NHS acute and community settings for eight years. I know what the evidence says, I know what works practically, and I know how to make dietary management fit into a child&apos;s actual life - school, parties, sleepovers, and all.
             </p>
             <p>
               All consultations are online. The initial appointment is an hour and includes a full assessment and a written plan. I can coordinate with your child&apos;s existing hospital or GP team if that&apos;s helpful.

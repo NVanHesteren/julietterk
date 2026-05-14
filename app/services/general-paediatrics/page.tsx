@@ -118,7 +118,7 @@ export default function GeneralPaediatrics() {
                 I don&apos;t do one-size-fits-all meal plans. Every child is different, every family has different routines, preferences, and constraints. My job is to understand your specific situation and give you advice that actually works in your kitchen, with your child.
               </p>
               <p className="text-base text-ink-mid leading-[1.7] mb-5">
-                Everything I recommend is evidence-based. I stay current with the research, I draw on six years of NHS experience across a wide range of paediatric conditions, and I give you the honest picture - including when something isn&apos;t within my scope and you need a different professional.
+                Everything I recommend is evidence-based. I stay current with the research, I draw on eight years of NHS experience across a wide range of paediatric conditions, and I give you the honest picture - including when something isn&apos;t within my scope and you need a different professional.
               </p>
               <p className="text-base text-ink-mid leading-[1.7]">
                 All consultations are online. The initial appointment is an hour and includes a full assessment and a written plan. Follow-ups are 30 minutes.

@@ -19,7 +19,7 @@ export default function OrganizationSchema() {
         name: "Juliette Reese-Kari - Paediatric Dietitian",
         url: "https://julietterk.com",
         description:
-          "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 6+ years NHS specialist experience.",
+          "Online paediatric dietitian consultations for infants, children and teens. HCPC registered, 8+ years NHS specialist experience.",
         image: "https://julietterk.com/og.png",
         priceRange: "££",
         areaServed: {

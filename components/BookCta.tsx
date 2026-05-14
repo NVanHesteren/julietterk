@@ -19,7 +19,7 @@ export default function BookCta({
   return (
     <section className="py-16 md:py-24">
       <div className="max-w-wide mx-auto px-[5vw]">
-        <div className="bg-ink text-cream rounded py-[88px] px-[5vw] text-center">
+        <div className="bg-ink text-cream rounded py-12 md:py-[88px] px-[5vw] text-center">
           <div className="max-w-narrow mx-auto">
             <span className="eyebrow !text-sage-pale before:!bg-sage-pale">Book a consultation</span>
             <h2 className="h-display !text-cream text-[clamp(2rem,4vw,3rem)] mt-4 mb-4">
