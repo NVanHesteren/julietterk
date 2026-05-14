@@ -87,7 +87,7 @@ export default function ServicesIndex() {
                 <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 md:gap-12 items-start">
                   <div>
                     <span className="text-[11px] uppercase tracking-[0.14em] text-clay font-medium">{b.num}</span>
-                    <h2 className="font-serif font-normal text-[clamp(1.6rem,3vw,2.2rem)] text-ink tracking-[-0.014em] leading-[1.15] mt-2 mb-4">
+                    <h2 className="h-display text-[clamp(1.6rem,3vw,2.2rem)] mt-2 mb-4">
                       {renderTitle(b.title)}
                     </h2>
                     <p className="text-base text-ink-mid leading-[1.7] mb-5">{b.desc}</p>
