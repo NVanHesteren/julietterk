@@ -74,7 +74,7 @@ export default function Nav() {
             ))}
           </ul>
 
-          <BookButton variant="primary" className="!py-[11px] !px-[22px] !text-[13px] !rounded-full">
+          <BookButton variant="primary" className={`!py-[11px] !px-[22px] !text-[13px] !rounded-full ${menuOpen ? "!hidden md:!inline-flex" : ""}`}>
             <span className="hidden sm:inline">Book a consultation</span>
             <span className="sm:hidden">Book</span>
           </BookButton>
