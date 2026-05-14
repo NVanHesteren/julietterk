@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-wide mx-auto px-[5vw]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] gap-12 mb-14">
           <div>
-            <span className="font-serif font-normal text-[18px] text-ink tracking-[-0.012em] block mb-1">
+            <span className="font-serif font-normal text-[18px] text-ink tracking-[-0.012em] block leading-none">
               Juliette Reese-Kari
             </span>
             <span className="text-[10px] uppercase tracking-[0.18em] text-ink-light font-medium">
