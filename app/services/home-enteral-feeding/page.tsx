@@ -47,7 +47,7 @@ export default function HomeEnteralFeeding() {
       <FaqSchema faqs={FAQS} />
       <section className="py-20 md:py-[80px] bg-cream">
         <div className="max-w-wide mx-auto px-[5vw]">
-          <span className="eyebrow">Services · 03</span>
+          <span className="eyebrow">Services</span>
           <h1 className="h-display text-[clamp(2.4rem,5vw,3.6rem)] mt-5 mb-6 max-w-[820px]">
             Home <em>enteral feeding</em> support.
           </h1>
