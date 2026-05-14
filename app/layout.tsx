@@ -4,6 +4,7 @@ import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PasswordGate from "@/components/PasswordGate";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -65,6 +66,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="pt-[72px]">{children}</main>
           <Footer />
         </PasswordGate>
+        <Analytics />
       </body>
     </html>
   );
