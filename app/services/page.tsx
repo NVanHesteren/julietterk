@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookCta from "@/components/BookCta";
-import ConsultationInfo from "@/components/ConsultationInfo";
 import ThumbStrip from "@/components/ThumbStrip";
 import { FadeUp, StaggerChildren, StaggerItem } from "@/components/Animate";
 
@@ -115,8 +114,6 @@ export default function ServicesIndex() {
           ))}
         </StaggerChildren>
       </section>
-
-      <ConsultationInfo />
 
       <BookCta />
     </>
