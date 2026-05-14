@@ -49,7 +49,7 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-5">
+        <div className="flex items-center gap-8">
           {/* Desktop links */}
           <ul className="hidden md:flex gap-7 items-center list-none m-0 p-0">
             {LINKS.map((l) => (

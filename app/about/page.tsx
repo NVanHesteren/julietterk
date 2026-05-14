@@ -33,7 +33,7 @@ export default function AboutPage() {
             <div className="aspect-[4/5] bg-sage-pale rounded overflow-hidden relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/juliette.png"
+                src="/juliette.jpg"
                 alt="Juliette Reese-Kari, paediatric dietitian"
                 className="w-full h-full object-cover"
               />

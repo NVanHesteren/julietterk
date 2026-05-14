@@ -15,7 +15,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.3fr] gap-10 md:gap-16 items-center">
           <div className="aspect-[4/5] bg-sage-pale rounded overflow-hidden relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/juliette.png" alt="Juliette Reese-Kari, paediatric dietitian" className="w-full h-full object-cover" />
+            <img src="/juliette.jpg" alt="Juliette Reese-Kari, paediatric dietitian" className="w-full h-full object-cover" />
           </div>
 
           <div>
