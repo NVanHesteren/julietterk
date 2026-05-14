@@ -1,7 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 
 interface AnimateProps {
   children: ReactNode;
@@ -9,63 +8,61 @@ interface AnimateProps {
   delay?: number;
 }
 
+function useInView(delay: number) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => el.classList.add("in-view"), delay * 1000);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay]);
+
+  return ref;
+}
+
 export function FadeUp({ children, className = "", delay = 0 }: AnimateProps) {
+  const ref = useInView(delay);
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-      style={{ willChange: "opacity, transform" }}
-      className={className}
-    >
+    <div ref={ref} className={`animate-fade-up ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function FadeIn({ children, className = "", delay = 0 }: AnimateProps) {
+  const ref = useInView(delay);
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
-      style={{ willChange: "opacity" }}
-      className={className}
-    >
+    <div ref={ref} className={`animate-fade-in ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function StaggerChildren({ children, className = "" }: { children: ReactNode; className?: string }) {
+  const ref = useInView(0);
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-60px" }}
-      variants={{
-        visible: { transition: { staggerChildren: 0.12 } },
-      }}
-      className={className}
-    >
+    <div ref={ref} className={`animate-stagger ${className}`}>
       {children}
-    </motion.div>
+    </div>
   );
 }
 
 export function StaggerItem({ children, className = "" }: { children: ReactNode; className?: string }) {
   return (
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 10 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
-      }}
-      style={{ willChange: "opacity, transform" }}
-      className={className}
-    >
+    <div className="animate-stagger-item">
       {children}
-    </motion.div>
+    </div>
   );
 }
