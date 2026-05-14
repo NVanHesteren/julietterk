@@ -48,7 +48,7 @@ export default function Gastroenterology() {
         <div className="max-w-wide mx-auto px-[5vw]">
           <span className="eyebrow">Services</span>
           <h1 className="h-display text-[clamp(2.4rem,5vw,3.6rem)] mt-5 mb-6 max-w-[820px]">
-            Paediatric <em>gastroenterology</em> nutrition.
+            <em>Gastroenterology</em>.
           </h1>
           <p className="text-[17px] text-ink-mid max-w-[640px] leading-[1.65] mb-8">
             When there&apos;s a diagnosed gut condition, the nutrition piece runs alongside the medical care. Inflammatory bowel disease, coeliac disease, reflux, food intolerances - this is where my specialist NHS experience across acute and community settings comes in.

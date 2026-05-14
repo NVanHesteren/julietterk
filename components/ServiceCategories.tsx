@@ -6,7 +6,7 @@ import { FadeUp, StaggerChildren, StaggerItem } from "./Animate";
 const CATS = [
   {
     num: "01", href: "/services/general-paediatrics",
-    title: "General paediatrics",
+    title: ["General ", "paediatrics", ""],
     desc: "The day-to-day stuff. Weaning, fussy eating, growth, weight, food allergies. Most of what brings parents through the door.",
     items: [
       "Weaning & introducing solids",
@@ -18,7 +18,7 @@ const CATS = [
   },
   {
     num: "02", href: "/services/gastroenterology",
-    title: "Gastroenterology",
+    title: ["", "Gastroenterology", ""],
     desc: "When there's a diagnosed gut condition, the nutrition piece runs alongside the medical care. This is where I bring my specialist experience.",
     items: [
       "Coeliac disease",
@@ -29,7 +29,7 @@ const CATS = [
   },
   {
     num: "03", href: "/services/home-enteral-feeding",
-    title: "Home enteral feeding",
+    title: ["Home ", "enteral feeding", ""],
     desc: "Long-term tube feeding, blended diets, complex needs. This is the area I've stayed in across the NHS, and where many private dietitians don't go.",
     items: [
       "Long-term gastrostomy feeding",
@@ -62,8 +62,8 @@ export default function ServiceCategories() {
               className="group bg-white p-8 pt-10 rounded border border-ink/10 flex flex-col gap-3.5 transition-all duration-300 hover:border-sage hover:-translate-y-0.5 no-underline h-full"
             >
               <span className="text-[11px] uppercase tracking-[0.14em] text-ink-light font-medium">{c.num}</span>
-              <h3 className="font-serif font-normal text-2xl text-ink tracking-[-0.014em] leading-[1.15]">
-                {c.title}
+              <h3 className="h-display text-2xl">
+                {c.title[0]}<em>{c.title[1]}</em>{c.title[2]}
               </h3>
               <p className="text-sm text-ink-mid leading-[1.65] mb-1">{c.desc}</p>
               <ul className="list-none p-0 m-0 flex-1">
