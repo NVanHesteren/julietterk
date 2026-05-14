@@ -16,7 +16,7 @@ const QUALIFICATIONS = [
 ];
 
 const REGISTRATIONS = [
-  "Health Care Professions Council (HCPC) registered",
+  "Health Care Professions Council (HCPC) registered - DT29509",
   "Full member of the British Dietetic Association (BDA)",
   "Member of the BDA Paediatric Group (including autism sub-group)",
   "Member of the BDA Freelance Dietitians Group",

@@ -56,7 +56,7 @@ export default function Footer() {
           <div>
             <h5 className="text-[11px] uppercase tracking-[0.16em] text-ink-light font-medium mb-4">Contact</h5>
             <ul className="list-none space-y-2.5">
-              <li><a href="mailto:hello@julietterk.com" className="text-sm text-ink hover:text-sage transition-colors">hello@julietterk.com</a></li>
+              <li><a href="mailto:julietterk@gmail.com" className="text-sm text-ink hover:text-sage transition-colors">Email me</a></li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/juliette-reese-kari-216658192/"
@@ -73,7 +73,7 @@ export default function Footer() {
 
         <div className="pt-7 border-t border-ink/10 flex flex-wrap justify-between items-center gap-6 text-xs text-ink-light">
           <div>© {new Date().getFullYear()} Juliette Reese-Kari · julietterk.com</div>
-          <div>HCPC registered · BDA member</div>
+          <div>HCPC registered (DT29509) · BDA member</div>
         </div>
       </div>
     </footer>

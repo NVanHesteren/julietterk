@@ -2,7 +2,7 @@ import Link from "next/link";
 import BookButton from "./BookButton";
 
 const CREDS = [
-  "HCPC registered",
+  "HCPC registered (DT29509)",
   "BDA full member",
   "6+ years NHS",
   "Paediatric specialist",
